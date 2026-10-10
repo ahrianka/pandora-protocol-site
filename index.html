@@ -12,7 +12,7 @@
 <body>
 <nav>
   <a class="logo" href="#top" id="nav-logo">PANDORA//PROTOCOL</a>
-  <ul>
+  <ul id="nav-links">
     <li><a href="#about" data-i18n="nav.about"></a></li>
     <li><a href="#roles" data-i18n="nav.roles"></a></li>
     <li><a href="#monsters" data-i18n="nav.monsters"></a></li>
@@ -25,6 +25,9 @@
     <button id="lang-en" data-lang="en">EN</button>
     <button id="lang-pl" data-lang="pl">PL</button>
   </div>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <header class="hero" id="top">
@@ -32,8 +35,10 @@
     <div class="tag mono" data-i18n="hero.tag"></div>
     <h1>PROTOCOL<br><span>«PANDORA»</span></h1>
     <p data-i18n="hero.text"></p>
-    <a class="btn" href="#about" id="cta-learn" data-i18n="hero.learn"></a>
-    <a class="btn alt steam-link" href="#" target="_blank" rel="noopener" id="cta-wishlist" data-i18n="hero.wish"></a>
+    <div class="hero-btns">
+      <a class="btn" href="#about" id="cta-learn" data-i18n="hero.learn"></a>
+      <a class="btn alt steam-link" href="#" target="_blank" rel="noopener" id="cta-wishlist" data-i18n="hero.wish"></a>
+    </div>
   </div>
 </header>
 
@@ -300,6 +305,9 @@ function setLang(l){
 document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
 setLang(localStorage.getItem('lang')||(navigator.language.startsWith('uk')?'uk':'en'));
 document.querySelectorAll('.steam-link').forEach(a=>a.href=STEAM_URL);
+const hbg=document.getElementById('hamburger'),navLinks=document.getElementById('nav-links');
+hbg.addEventListener('click',()=>{hbg.classList.toggle('open');navLinks.classList.toggle('open');});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hbg.classList.remove('open');navLinks.classList.remove('open');}));
 const form=document.getElementById('signup-form'),msg=document.getElementById('signup-msg');
 form.addEventListener('submit',async e=>{
   e.preventDefault();

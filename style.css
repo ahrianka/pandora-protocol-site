@@ -5,9 +5,15 @@ body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-
 body::after{content:"";position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px);z-index:50}
 h1,h2,h3,.mono{font-family:'Share Tech Mono',monospace;letter-spacing:.04em}
 a{color:inherit;text-decoration:none}
-nav{position:fixed;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:18px 6vw;z-index:20;background:linear-gradient(#07090cee,transparent)}
+nav{position:fixed;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:18px 6vw;z-index:20;background:linear-gradient(#07090cee,transparent);gap:12px}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:24px;height:2px;background:var(--cyan);transition:.3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-menu{display:flex;align-items:center;gap:28px;list-style:none;font-size:.9rem;color:var(--mute)}
 nav .logo{color:var(--cyan);font-family:'Share Tech Mono';font-size:1.1rem}
-nav ul{display:flex;gap:28px;list-style:none;font-size:.9rem;color:var(--mute)}
+nav ul{display:flex;gap:28px;list-style:none;font-size:.9rem;color:var(--mute);align-items:center}
 nav ul a:hover{color:var(--cyan)}
 .lang{display:flex;border:1px solid #2a3a44}
 .lang button{background:none;border:0;color:var(--mute);font-family:'Share Tech Mono';padding:6px 12px;cursor:pointer;transition:.25s}
@@ -20,7 +26,8 @@ nav ul a:hover{color:var(--cyan)}
 h1{font-size:clamp(2.6rem,7vw,5.5rem);line-height:1;margin:14px 0;color:#fff;text-shadow:0 0 30px rgba(61,230,208,.45)}
 h1 span{color:var(--cyan)}
 .hero p{font-size:1.15rem;color:var(--text);margin-bottom:32px}
-.btn{display:inline-block;padding:14px 30px;border:1px solid var(--cyan);color:var(--cyan);font-family:'Share Tech Mono';transition:.3s;margin-right:12px;background:rgba(61,230,208,.06)}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:14px 30px;border:1px solid var(--cyan);color:var(--cyan);font-family:'Share Tech Mono';transition:.3s;margin-right:0;background:rgba(61,230,208,.06)}
 .btn:hover{background:var(--cyan);color:#000;box-shadow:0 0 30px var(--cyan)}
 .btn.alt{border-color:var(--red);color:var(--red);background:rgba(255,59,71,.06)}
 .btn.alt:hover{background:var(--red);color:#000;box-shadow:0 0 30px var(--red)}
@@ -54,7 +61,32 @@ footer{text-align:center;padding:30px;color:var(--mute);font-size:.8rem;border-t
 .reveal.in{opacity:1;transform:none}
 @keyframes rise{from{opacity:0;transform:translateY(40px)}}
 @keyframes blink{0%,92%,100%{opacity:1}94%{opacity:.2}97%{opacity:.8}}
-@media(max-width:700px){nav ul{display:none}}
+/* ── Mobile ── */
+@media(max-width:720px){
+  .hamburger{display:flex}
+  nav ul{
+    display:none;position:fixed;top:0;left:0;right:0;bottom:0;
+    flex-direction:column;justify-content:center;align-items:center;
+    background:#07090cf5;gap:32px;font-size:1.2rem;z-index:19
+  }
+  nav ul.open{display:flex}
+  .lang{margin-left:auto}
+  section{padding:80px 5vw}
+  .cta{padding:90px 5vw}
+  .hero{padding:0 5vw;align-items:flex-end;padding-bottom:15vh}
+  .hero p{font-size:1rem}
+  .hero-btns{flex-direction:column;align-items:flex-start}
+  .btn{width:100%;text-align:center;padding:14px 20px}
+  .g4{grid-template-columns:1fr}
+  .g2{grid-template-columns:1fr}
+  .stats{gap:28px}
+  .stats div b{font-size:1.8rem}
+  .terminal{font-size:.75rem;padding:16px}
+  .gallery-grid{grid-template-columns:1fr}
+  .gallery-item img{height:200px}
+  .gallery-item figcaption{opacity:1;transform:none}
+  .signup{max-width:100%}
+}
 .signup{max-width:520px;margin:50px auto 0}
 .signup>p{color:var(--cyan);margin-bottom:12px;font-size:.85rem}
 .signup-row{display:flex;gap:10px}
@@ -63,7 +95,7 @@ footer{text-align:center;padding:30px;color:var(--mute);font-size:.8rem;border-t
 .signup .btn{margin:0;cursor:pointer}
 .signup-msg{min-height:1.6em;margin-top:12px;font-size:.9rem;color:var(--mute)}
 .signup-msg.ok{color:#7dff9a}.signup-msg.err{color:var(--red)}
-@media(max-width:600px){.signup-row{flex-direction:column}}
+@media(max-width:600px){.signup-row{flex-direction:column;}.signup input[type=email]{font-size:.85rem}}
 .roadmap .rm-h{color:var(--cyan);font-size:.8rem;margin-top:18px;opacity:.8}
 .roadmap .rm-h:first-child{margin-top:0}
 .progress-wrap{margin-bottom:26px}
