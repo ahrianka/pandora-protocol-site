@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Protocol «Pandora» — асиметричний co-op horror</title>
+<meta name="description" content="Protocol Pandora: асиметричний co-op horror на 4 гравців. Один Оператор, троє Ліквідаторів, покинута станція і монстр, якого щоразу збирає seed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <a class="logo" href="#top" id="nav-logo">PANDORA//PROTOCOL</a>
+  <ul>
+    <li><a href="#about" data-i18n="nav.about"></a></li>
+    <li><a href="#roles" data-i18n="nav.roles"></a></li>
+    <li><a href="#monsters" data-i18n="nav.monsters"></a></li>
+    <li><a href="#pest">P.E.S.T.</a></li>
+    <li><a href="#gallery" data-i18n="nav.gallery"></a></li>
+    <li><a href="#roadmap" data-i18n="nav.roadmap"></a></li>
+  </ul>
+  <div class="lang" role="group" aria-label="Language">
+    <button id="lang-uk" data-lang="uk">UA</button>
+    <button id="lang-en" data-lang="en">EN</button>
+    <button id="lang-pl" data-lang="pl">PL</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div class="tag mono" data-i18n="hero.tag"></div>
+    <h1>PROTOCOL<br><span>«PANDORA»</span></h1>
+    <p data-i18n="hero.text"></p>
+    <a class="btn" href="#about" id="cta-learn" data-i18n="hero.learn"></a>
+    <a class="btn alt steam-link" href="#" target="_blank" rel="noopener" id="cta-wishlist" data-i18n="hero.wish"></a>
+  </div>
+</header>
+
+<main>
+<section id="about" class="reveal">
+  <h2 data-i18n="about.title"></h2>
+  <p class="lead" data-i18n="about.lead"></p>
+  <div class="grid g4">
+    <div class="card"><span class="num">01</span><h3 data-i18n="t1.h"></h3><p data-i18n="t1.p"></p></div>
+    <div class="card"><span class="num">02</span><h3 data-i18n="t2.h"></h3><p data-i18n="t2.p"></p></div>
+    <div class="card"><span class="num">03</span><h3 data-i18n="t3.h"></h3><p data-i18n="t3.p"></p></div>
+    <div class="card red"><span class="num">04</span><h3>Black Hour</h3><p data-i18n="t4.p"></p></div>
+  </div>
+  <div class="stats">
+    <div><b>1+3</b><span data-i18n="s1"></span></div>
+    <div><b>43</b><span data-i18n="s2"></span></div>
+    <div><b>2</b><span data-i18n="s3"></span></div>
+    <div><b>∞</b><span data-i18n="s4"></span></div>
+  </div>
+</section>
+
+<section id="roles" class="reveal">
+  <h2 data-i18n="roles.title"></h2>
+  <p class="lead" data-i18n="roles.lead"></p>
+  <div class="grid g2">
+    <div class="card"><h3 data-i18n="liq.h"></h3><p data-i18n="liq.p"></p><ul data-i18n="liq.ul"></ul></div>
+    <div class="card red"><h3 data-i18n="op.h"></h3><p data-i18n="op.p"></p><ul data-i18n="op.ul"></ul></div>
+  </div>
+</section>
+
+<section id="monsters" class="reveal">
+  <h2 data-i18n="mon.title"></h2>
+  <p class="lead" data-i18n="mon.lead"></p>
+  <div class="grid g4">
+    <div class="card"><h3>Movement</h3><p data-i18n="mon.mv"></p><div class="chips"><span>VentTraverse</span><span>CeilingCrawl</span><span>StopAndGo</span><span>GazeParalysis</span></div></div>
+    <div class="card red"><h3>Attack</h3><p data-i18n="mon.at"></p><div class="chips"><span>GrabAndDrag</span><span>AcidSpit</span><span>ScreamStun</span><span class="s">LaserGaze</span></div></div>
+    <div class="card"><h3>Detection</h3><p data-i18n="mon.dt"></p><div class="chips"><span>SoundSeeker</span><span>LightMoth</span><span>DarkStalker</span><span>MicrophoneRush</span></div></div>
+    <div class="card"><h3>Special</h3><p data-i18n="mon.sp"></p><div class="chips"><span>RadarSpoofer</span><span>VoiceMimic</span><span>PowerDrainer</span><span>CommsJammer</span></div></div>
+  </div>
+  <div class="grid g2" style="margin-top:22px">
+    <div class="card red"><h3>🎤 MicrophoneRush</h3><p data-i18n="mon.ex1"></p></div>
+    <div class="card red"><h3>👁 GazeParalysis + LaserGaze</h3><p data-i18n="mon.ex2"></p></div>
+  </div>
+</section>
+
+<section id="pest" class="reveal">
+  <h2>P.E.S.T. Terminal</h2>
+  <p class="lead" data-i18n="pest.lead"></p>
+<div class="terminal">P.E.S.T. — Protocol Entity Signature Tracker   v2.1
+──────────────────────────────────────────────────
+MOVEMENT          ATTACK            DETECT
+<span class="no">[✗]</span> CeilingCrawl   <span class="no">[✗]</span> GrabAndDrag   <span class="no">[?]</span> SoundSeeker
+<span class="ok">[✓]</span> WallPhasing    <span class="no">[?]</span> AcidSpit      <span class="no">[✗]</span> DarkStalker
+<span class="no">[✗]</span> StopAndGo      <span class="no">[?]</span> ScreamStun    <span class="no">[?]</span> LightMoth
+──────────────────────────────────────────────────
+EVIDENCE: Cold ≤ -10°C      → -DarkStalker ✗
+          Marker thru walls → +WallPhasing ✓
+[F1] Evidence   [F2] Mark   [F5] IDENTIFY</div>
+</section>
+
+<section id="gallery" class="reveal">
+  <h2 data-i18n="gal.title"></h2>
+  <p class="lead" data-i18n="gal.lead"></p>
+  <div class="gallery-grid">
+    <figure class="gallery-item">
+      <img src="gallery/control.jpg" alt="Operator Control Room" loading="lazy">
+      <figcaption data-i18n="gal.c1"></figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="gallery/atrium.jpg" alt="Station Atrium" loading="lazy">
+      <figcaption data-i18n="gal.c2"></figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="gallery/lab.jpg" alt="Research Lab" loading="lazy">
+      <figcaption data-i18n="gal.c3"></figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="gallery/cargo.jpg" alt="Cargo Hold" loading="lazy">
+      <figcaption data-i18n="gal.c4"></figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="gallery/engine.jpg" alt="Engine Room" loading="lazy">
+      <figcaption data-i18n="gal.c5"></figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="gallery/workshop.jpg" alt="Workshop" loading="lazy">
+      <figcaption data-i18n="gal.c6"></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="roadmap" class="reveal">
+  <h2 data-i18n="rm.title"></h2>
+  <p class="lead">Unity 6 · URP · Netcode for GameObjects · Lobby + Relay · Vivox VoIP</p>
+  <div class="progress-wrap"><div class="progress-head mono"><span data-i18n="rm.prog"></span><b>50%</b></div><div class="progress"><div class="progress-fill" style="--p:50%"></div></div></div>
+  <div class="grid g2">
+    <div class="card"><ul class="roadmap" data-i18n="rm.ul"></ul></div>
+    <div class="card red"><h3 data-i18n="fund.h"></h3><p data-i18n="fund.p"></p><ul class="roadmap" data-i18n="fund.ul" style="margin-top:14px"></ul></div>
+  </div>
+</section>
+
+<section class="cta" id="cta">
+  <h2 style="font-size:3rem" data-i18n="cta.h"></h2>
+  <p class="lead" style="margin:0 auto 30px" data-i18n="cta.p"></p>
+  <a class="btn alt steam-link" href="#" target="_blank" rel="noopener" id="cta-final" data-i18n="cta.btn"></a>
+  <form class="signup" id="signup-form" novalidate>
+    <p class="mono" data-i18n="form.label"></p>
+    <div class="signup-row">
+      <input type="email" id="signup-email" name="email" required autocomplete="email" data-i18n-ph="form.ph">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+      <button class="btn" type="submit" id="signup-submit" data-i18n="form.btn"></button>
+    </div>
+    <p class="signup-msg" id="signup-msg" role="status"></p>
+  </form>
+</section>
+</main>
+<footer data-i18n="footer"></footer>
+
+<script>
+/* ===== CONFIG: замініть на свої значення ===== */
+const STEAM_URL="https://store.steampowered.com/app/0000000/Pandora_Protocol/"; // TODO: реальний App ID
+const FORM_ENDPOINT=""; // ЗАГЛУШКА: порожньо = лише підтвердження, без реальної відправки. Вставте сюди Formspree URL, щоб збирати емейли по-справжньо.
+/* ============================================ */
+const T={
+uk:{
+"nav.about":"Про гру","nav.roles":"Ролі","nav.monsters":"Монстри","nav.roadmap":"Розробка",
+"hero.tag":"● СТАНЦІЯ «ПАНДОРА» · ЗВ'ЯЗОК ВТРАЧЕНО",
+"hero.text":"Кооперативний horror на чотирьох. Оператор бачить усю станцію, але вийти з рубки не може. Троє Ліквідаторів спускаються в темряву з ліхтариками. І щось там уже почуло, як ви прийшли.",
+"hero.learn":"ДО БРИФІНГУ","hero.wish":"В БАЖАНЕ",
+"about.title":"Протокол активовано",
+"about.lead":"Кожен рейд seed генерує нову станцію і нового монстра. Вбити його не вийде. Треба розпізнати, з чим ви маєте справу, стримати його й винести достатньо здобичі, щоб закрити квоту.",
+"t1.h":"Термінали","t1.p":"Затисніть E і запустіть системи станції. Поки руки зайняті, ви беззахисні.",
+"t2.h":"Завантаження","t2.p":"Шістдесят секунд передачі даних. Шум розходиться всією станцією, і почує його не лише команда.",
+"t3.h":"Герметизація","t3.p":"Запечатайте шлюзи під дощем іскор. Пропустите один, і все доведеться починати знову.",
+"t4.p":"Світло гасне повністю. Залишається тільки евакуація, і чекати не буде ніхто.",
+"s1":"Оператор + Ліквідатори","s2":"трейти в дизайні монстрів","s3":"поверхи у фінальній станції","s4":"комбінацій",
+"roles.title":"Дві ролі, один страх",
+"roles.lead":"Оператор бачить карту, але не бачить, що коїться в кімнаті. Ліквідатори бачать кімнату, але не бачать карти. Виживете, лише якщо говоритимете одне з одним.",
+"liq.h":"Ліквідатор","liq.p":"Перша особа. Ви там, куди радар не дотягується.",
+"liq.ul":"<li>Виконуєте завдання під тиском</li><li>Ліхтарик, рація, здобич</li><li>Шукаєте докази: EMF, холод, слиз, УФ</li><li>Доповідаєте Оператору і повертаєтесь живими</li>",
+"op.h":"Оператор","op.p":"Двері рубки заблоковані. Ваша зброя тут — пульт.",
+"op.ul":"<li>Радар, CCTV і детектор руху на CRT</li><li>Розподіл енергії, рубильники, гермодвері</li><li>Сирена, евакуація, повернення загиблих</li><li>Розпізнаєте монстра через P.E.S.T.</li>",
+"mon.title":"Монстр, якого не існувало вчора",
+"mon.lead":"Монстр складається з чотирьох трейтів, по одному з кожної категорії. Те, що врятувало вас минулого разу, цього разу може вбити.",
+"mon.mv":"Як він пересувається станцією.","mon.at":"Як він убиває і що в вас забирає.","mon.dt":"Як він вас знаходить.","mon.sp":"Як він бреше Оператору.",
+"mon.ex1":"Біжить на голос у рації. Що більше говорите, то ближче він. Доведеться мовчати, навіть коли страшно.",
+"mon.ex2":"Поки ви на нього дивитесь, він рухається і стріляє лазером. Відведете погляд, і він завмре. Але не дивитись, коли воно поруч, дуже важко.",
+"pest.lead":"Protocol Entity Signature Tracker. Ліквідатори передають докази по рації, Оператор вносить їх у термінал, і система відсіює неможливі трейти. Правильна ідентифікація дає бонус до квоти. За помилку платите грошима і новою погонею.",
+"rm.title":"Статус розробки",
+"rm.prog":"ГОТОВНІСТЬ ПРОЄКТУ",
+"rm.ul":"<li class='rm-h'>// ЗРОБЛЕНО</li><li>✅ Мультиплеєр до 4 гравців: лобі за кодом, без VPN</li><li>✅ Рубка Оператора: радар, CCTV, детектор руху, енергія, гермодвері</li><li>✅ Процедурна станція з seed</li><li>✅ Здобич, квота рейду і пункт здачі</li><li>✅ Голосовий зв'язок: рація і просторовий звук (Vivox)</li><li class='rm-h'>// В РОБОТІ</li><li>🟡 Монстр: погоня, детекція, LaserGaze, GameDirector (плейтести)</li><li>🟡 Докази і термінал P.E.S.T.</li><li class='rm-h'>// ПІСЛЯ ФІНАНСУВАННЯ</li><li>⬜ Другий поверх і вентиляція</li><li>⬜ Повний каталог трейтів монстрів</li><li>⬜ Арт, звук, оптимізація</li><li>⬜ Сторінка в Steam, закриті плейтести, реліз</li>",
+"fund.h":"Фінансування","fund.p":"Наразі на розгляді наші заявки на польські грантові програми. Розробка продовжується, а фінансування дасть змогу завершити контент, продакшн і вийти в реліз.",
+"fund.ul":"<li>🟡 Польські грантові програми: заявки на розгляді</li><li>⬜ Повна команда продакшну</li><li>⬜ Запуск сторінки в Steam і маркетинг</li>",
+"cta.h":"Готові до рейду?","cta.p":"Збирайте команду. Станція чекає, і вона не порожня.","cta.btn":"ДОДАТИ В БАЖАНЕ У STEAM",
+"form.label":"> ОТРИМАТИ СИГНАЛ ПРО РЕЛІЗ","form.ph":"ваш@email.com","form.btn":"ПІДПИСАТИСЬ",
+"form.ok":"Готово. Ми напишемо, коли станція знову вийде на зв'язок.","form.bad":"Перевірте адресу електронної пошти.","form.err":"Не вдалося надіслати. Спробуйте пізніше.","form.sending":"Надсилаємо…",
+"nav.gallery":"Галерея",
+"gal.title":"Станція зсередини",
+"gal.lead":"Знімки з поточного стану розробки — рівні побудовані в Unity 6 з URP.",
+"gal.c1":"Рубка Оператора — радар, CCTV та пульт керування",
+"gal.c2":"Центральний атріум — серце станції",
+"gal.c3":"Дослідницька лабораторія — тут залишилися докази",
+"gal.c4":"Вантажний відсік — основне джерело здобичі",
+"gal.c5":"Машинне відділення — небезпечний маршрут евакуації",
+"gal.c6":"Майстерня — завдання, яке потребує двох рук",
+"footer":"© 2026 Protocol «Pandora» · Рання розробка"
+},
+en:{
+"nav.about":"About","nav.roles":"Roles","nav.monsters":"Monsters","nav.gallery":"Gallery","nav.roadmap":"Dev",
+"hero.tag":"● PANDORA STATION · SIGNAL LOST",
+"hero.text":"A 4-player co-op horror game. The Operator sees the whole station but is locked in the control room. Three Liquidators head into the dark with flashlights. Something down there already heard them come in.",
+"hero.learn":"START BRIEFING","hero.wish":"WISHLIST",
+"about.title":"Protocol engaged",
+"about.lead":"Every raid, the seed builds a new station and a new monster. You can't kill it. You have to figure out what it is, contain it, and haul out enough loot to hit the quota.",
+"t1.h":"Terminals","t1.p":"Hold E to bring the station's systems online. While your hands are busy, you're defenseless.",
+"t2.h":"Download","t2.p":"Sixty seconds of data transfer. The noise carries through the whole station, and your team isn't the only thing that hears it.",
+"t3.h":"Seal","t3.p":"Seal the bulkheads under a shower of sparks. Miss one and you start over.",
+"t4.p":"The lights go out completely. All that's left is evacuation, and nobody waits for stragglers.",
+"s1":"Operator + Liquidators","s2":"monster traits designed","s3":"floors in the final station","s4":"combinations",
+"roles.title":"Two roles, one fear",
+"roles.lead":"The Operator sees the map but not what's in the room. The Liquidators see the room but not the map. You only survive if you keep talking.",
+"liq.h":"Liquidator","liq.p":"First person. You're where the radar can't reach.",
+"liq.ul":"<li>Complete objectives under pressure</li><li>Flashlight, radio, loot</li><li>Gather evidence: EMF, cold, slime, UV</li><li>Report to the Operator and make it back alive</li>",
+"op.h":"Operator","op.p":"The control room is locked. Your weapon is the console.",
+"op.ul":"<li>Radar, CCTV and motion tracker on the CRTs</li><li>Power routing, breakers, blast doors</li><li>Siren, evacuation, reviving the fallen</li><li>Identify the monster with P.E.S.T.</li>",
+"mon.title":"A monster that didn't exist yesterday",
+"mon.lead":"The monster is built from four traits, one from each category. What saved you last raid might be what kills you this time.",
+"mon.mv":"How it moves through the station.","mon.at":"How it kills and what it takes from you.","mon.dt":"How it finds you.","mon.sp":"How it lies to the Operator.",
+"mon.ex1":"It hunts the voice on the radio. The more you talk, the closer it gets. You'll have to stay quiet even when you're scared.",
+"mon.ex2":"While you look at it, it moves and fires a laser. Look away and it freezes. Not looking is hard when it's right next to you.",
+"pest.lead":"Protocol Entity Signature Tracker. Liquidators radio in evidence, the Operator logs it in the terminal, and the system rules out traits that don't fit. A correct ID earns a quota bonus. A wrong one costs you money and starts a new chase.",
+"rm.title":"Development status",
+"rm.prog":"PROJECT COMPLETION",
+"rm.ul":"<li class='rm-h'>// DONE</li><li>✅ Up to 4-player multiplayer: join by lobby code, no VPN</li><li>✅ Operator control room: radar, CCTV, motion tracker, power, blast doors</li><li>✅ Seed-based procedural station</li><li>✅ Loot, raid quota and deposit pad</li><li>✅ Voice comms: radio and proximity audio (Vivox)</li><li class='rm-h'>// IN PROGRESS</li><li>🟡 Monster: chase, detection, LaserGaze, GameDirector (playtesting)</li><li>🟡 Evidence and the P.E.S.T. terminal</li><li class='rm-h'>// AFTER FUNDING</li><li>⬜ Second floor and vents</li><li>⬜ Full monster trait catalog</li><li>⬜ Art, audio, optimization</li><li>⬜ Steam page, closed playtests, release</li>",
+"fund.h":"Funding","fund.p":"Our applications to Polish grant programs are currently under review. Development continues, and funding will let us finish content and production and ship the game.",
+"fund.ul":"<li>🟡 Polish grant programs: applications under review</li><li>⬜ Full production team</li><li>⬜ Steam page launch and marketing</li>",
+"cta.h":"Ready to deploy?","cta.p":"Get your team together. The station is waiting, and it isn't empty.","cta.btn":"WISHLIST ON STEAM",
+"form.label":"> GET RELEASE UPDATES","form.ph":"you@email.com","form.btn":"SUBSCRIBE",
+"form.ok":"Done. We'll write when the station comes back online.","form.bad":"Please check your email address.","form.err":"Couldn't send. Please try again later.","form.sending":"Sending…",
+"gal.title":"Inside the Station",
+"gal.lead":"Footage from the current build — levels constructed in Unity 6 with URP.",
+"gal.c1":"Operator Control Room — radar, CCTV and the command console",
+"gal.c2":"Central Atrium — the station's beating heart",
+"gal.c3":"Research Lab — evidence lingers here",
+"gal.c4":"Cargo Hold — primary source of loot",
+"gal.c5":"Engine Room — a dangerous evacuation route",
+"gal.c6":"Workshop — the objective that takes two pairs of hands",
+"footer":"© 2026 Protocol «Pandora» · Early development"
+},
+pl:{
+"nav.about":"O grze","nav.roles":"Role","nav.monsters":"Potwory","nav.gallery":"Galeria","nav.roadmap":"Dev",
+"hero.tag":"● STACJA 'PANDORA' · UTRATA SYGNAŁU",
+"hero.text":"Kooperacyjny horror dla czterech graczy. Operator widzi całą stację, ale jest zamknięty w sterowni. Trzech Likwidatorów schodzi w ciemność z latarkami. Coś tam już usłyszało, jak przyszli.",
+"hero.learn":"DO ODPRAWY","hero.wish":"DODAJ DO LISTY ŻYCZEŃ",
+"about.title":"Protokół aktywowany",
+"about.lead":"W każdym rajdzie seed generuje nową stację i nowego potwora. Nie da się go zabić. Trzeba go rozpoznać, powstrzymać i wynieść wystarczająco dużo łupów, żeby zamknąć kwotę.",
+"t1.h":"Terminale","t1.p":"Przytrzymaj E, by uruchomić systemy stacji. Gdy masz zajęte ręce, jesteś bezbronny.",
+"t2.h":"Pobieranie","t2.p":"Sześćdziesiąt sekund transferu danych. Hałas niesie się przez całą stację i słyszy go nie tylko twój zespół.",
+"t3.h":"Uszczelnienie","t3.p":"Uszczelnij śluzy w deszczu iskier. Przegap jedną — zaczynasz od początku.",
+"t4.p":"Światła gasną całkowicie. Zostaje już tylko ewakuacja — i nikt na nikogo nie czeka.",
+"s1":"Operator + Likwidatorzy","s2":"cech w projekcie potworów","s3":"piętra w docelowej stacji","s4":"kombinacji",
+"roles.title":"Dwie role, jeden strach",
+"roles.lead":"Operator widzi mapę, ale nie widzi co dzieje się w pomieszczeniu. Likwidatorzy widzą pomieszczenie, ale nie mapę. Przeżyjecie tylko jeśli będziecie ze sobą rozmawiać.",
+"liq.h":"Likwidator","liq.p":"Pierwsza osoba. Jesteś tam, gdzie radar nie sięga.",
+"liq.ul":"<li>Wykonujesz zadania pod presją</li><li>Latarka, radio, łupy</li><li>Zbierasz dowody: EMF, zimno, śluz, UV</li><li>Raportujesz do Operatora i wracasz żywy</li>",
+"op.h":"Operator","op.p":"Drzwi sterowni są zablokowane. Twoją bronią jest konsola.",
+"op.ul":"<li>Radar, CCTV i detektor ruchu na monitorach CRT</li><li>Rozdzielnica energii, bezpieczniki, śluzy pancerne</li><li>Syrena, ewakuacja, przywracanie poległych</li><li>Identyfikacja potwora przez P.E.S.T.</li>",
+"mon.title":"Potwór, który wczoraj nie istniał",
+"mon.lead":"Potwór składa się z czterech cech, po jednej z każdej kategorii. To, co ocalało cię ostatnim razem, tym razem może cię zabić.",
+"mon.mv":"Jak porusza się po stacji.","mon.at":"Jak zabija i co ci odbiera.","mon.dt":"Jak cię znajdzie.","mon.sp":"Jak okłamuje Operatora.",
+"mon.ex1":"Goni głos w radiu. Im więcej mówisz, tym jest bliżej. Będziesz musiał milczeć, nawet gdy się boisz.",
+"mon.ex2":"Kiedy na niego patrzysz, porusza się i strzela laserem. Odwróć wzrok — zamarza. Ale nie patrzeć, gdy jest obok, jest bardzo trudno.",
+"pest.lead":"Protocol Entity Signature Tracker. Likwidatorzy przesyłają dowody przez radio, Operator wpisuje je do terminala, a system eliminuje niemożliwe cechy. Prawidłowa identyfikacja daje bonus do kwoty. Za błąd płacisz pieniędzmi i zaczyna się nowy pościg.",
+"rm.title":"Status deweloperski",
+"rm.prog":"UKOŃCZENIE PROJEKTU",
+"rm.ul":"<li class='rm-h'>// ZROBIONE</li><li>✅ Multiplayer do 4 graczy: dołącz kodem lobby, bez VPN</li><li>✅ Sterownia Operatora: radar, CCTV, detektor ruchu, energia, śluzy</li><li>✅ Proceduralna stacja oparta na seed</li><li>✅ Łupy, kwota rajdu i punkt depozytowy</li><li>✅ Komunikacja głosowa: radio i dźwięk przestrzenny (Vivox)</li><li class='rm-h'>// W TRAKCIE</li><li>🟡 Potwór: pościg, detekcja, LaserGaze, GameDirector (testy)</li><li>🟡 Dowody i terminal P.E.S.T.</li><li class='rm-h'>// PO DOFINANSOWANIU</li><li>⬜ Drugie piętro i wentylacja</li><li>⬜ Pełny katalog cech potworów</li><li>⬜ Grafika, dźwięk, optymalizacja</li><li>⬜ Strona Steam, zamknięte testy, premiera</li>",
+"fund.h":"Finansowanie","fund.p":"Nasze wnioski o polskie programy grantowe są aktualnie w trakcie oceny. Prace deweloperskie trwają, a dofinansowanie pozwoli nam dokończyć content, produkcję i wydać grę.",
+"fund.ul":"<li>🟡 Polskie programy grantowe: wnioski w trakcie oceny</li><li>⬜ Pełny zespół produkcyjny</li><li>⬜ Uruchomienie strony Steam i marketing</li>",
+"cta.h":"Gotowi do rajdu?","cta.p":"Skompletuj drużynę. Stacja czeka — i nie jest pusta.","cta.btn":"DODAJ DO LISTY ŻYCZEŃ NA STEAM",
+"form.label":"> OTRZYMUJ AKTUALNOŚCI O PREMIERZE","form.ph":"twoj@email.com","form.btn":"SUBSKRYBUJ",
+"form.ok":"Gotowe. Napiszemy, gdy stacja znów nawiąże kontakt.","form.bad":"Sprawdź adres e-mail.","form.err":"Nie udało się wysłać. Spróbuj ponownie.","form.sending":"Wysyłam…",
+"gal.title":"Stacja od środka",
+"gal.lead":"Zrzuty z aktualnego builda — poziomy zbudowane w Unity 6 z URP.",
+"gal.c1":"Sterownia Operatora — radar, CCTV i pulpit sterowania",
+"gal.c2":"Centralny atrium — serce stacji",
+"gal.c3":"Laboratorium badawcze — tu pozostały dowody",
+"gal.c4":"Ładownia — główne źródło łupów",
+"gal.c5":"Maszynownia — niebezpieczna trasa ewakuacji",
+"gal.c6":"Warsztat — zadanie wymagające dwóch par rąk",
+"footer":"© 2026 Protocol «Pandora» · Wczesny etap produkcji"
+}};
+const META={uk:["Protocol «Pandora» — асиметричний co-op horror","Асиметричний co-op horror на 4 гравців. Один Оператор, троє Ліквідаторів, покинута станція і монстр, якого щоразу збирає seed."],
+en:["Protocol «Pandora» — asymmetric co-op horror","An asymmetric 4-player co-op horror game. One Operator, three Liquidators, an abandoned station and a monster the seed rebuilds every raid."],
+pl:["Protocol «Pandora» — asymetryczny co-op horror","Asymetryczny horror kooperacyjny dla 4 graczy. Jeden Operator, trzech Likwidatorów, opuszczona stacja i potwór generowany przez seed przy każdym rajdzie."]};
+function setLang(l){
+  document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const v=T[l][el.dataset.i18n];if(v!=null)el.innerHTML=v;});
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>el.placeholder=T[l][el.dataset.i18nPh]);
+  document.getElementById('signup-msg').textContent='';
+  document.title=META[l][0];document.querySelector('meta[name=description]').content=META[l][1];
+  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));
+  localStorage.setItem('lang',l);
+}
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
+setLang(localStorage.getItem('lang')||(navigator.language.startsWith('uk')?'uk':'en'));
+document.querySelectorAll('.steam-link').forEach(a=>a.href=STEAM_URL);
+const form=document.getElementById('signup-form'),msg=document.getElementById('signup-msg');
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const l=document.documentElement.lang,email=form.email.value.trim();
+  msg.className='signup-msg';
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){msg.textContent=T[l]['form.bad'];msg.classList.add('err');return;}
+  msg.textContent=T[l]['form.sending'];
+  try{
+    if(FORM_ENDPOINT){
+      const r=await fetch(FORM_ENDPOINT,{method:'POST',headers:{'Accept':'application/json','Content-Type':'application/json'},body:JSON.stringify({email,lang:l})});
+      if(!r.ok)throw 0;
+    }else{await new Promise(r=>setTimeout(r,600));console.info('[stub] email not sent:',email);}
+    msg.textContent=T[l]['form.ok'];msg.classList.add('ok');form.reset();
+  }catch(_){msg.textContent=T[l]['form.err'];msg.classList.add('err');}
+});
+const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
